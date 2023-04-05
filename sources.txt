@@ -3,4 +3,4 @@ laser: https://opengameart.org/content/lasershootingsx
 explosion: https://opengameart.org/content/explosion-0
 damage: https://opengameart.org/content/10-impactshield-blocks
 
-artwork: Kenney.nl
+artwork: https://www.kenney.nl/
