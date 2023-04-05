@@ -99,7 +99,7 @@ while True:
 				laser_frect = pygame.FRect(laser_surf.get_rect(midbottom = player_rect.center - pygame.math.Vector2(0,30)))
 				laser_data.append({'rect':laser_frect, 'dokill': False})
 				laser_sound.play()
-			if event.type == meteor_timer:
+			if event.type == meteor_timer and pygame.time.get_ticks() > 1_500:
 				x,y  = randint(-100, SCREEN_SIZE[0] -100), randint(-300,-100)
 				meteor_frect = pygame.FRect(meteor_surf.get_rect(center = (x, y)))
 				meteor_direction = pygame.math.Vector2(uniform(0.1,0.4),1)
