@@ -139,6 +139,10 @@ while True:
 	else:
 		display_surface.blit(star_bg_surf,(0,0))
 
+		# display scores
+		score = pygame.time.get_ticks() - start_time
+		display_score(score)
+
 		# display laser 
 		if laser_data:
 			for laser_dict in laser_data:
@@ -185,10 +189,6 @@ while True:
 			
 			meteor_data = [meteor_dict for meteor_dict in meteor_data if not meteor_dict['dokill']]
 			laser_data = [laser_dict for laser_dict in laser_data if not laser_dict['dokill']]
-
-		# display scores
-		score = pygame.time.get_ticks() - start_time
-		display_score(score)
 
 		# display lifes 
 		display_lifes(lifes)
