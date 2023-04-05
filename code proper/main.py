@@ -101,7 +101,7 @@ class Game:
 				if event.type == pygame.QUIT:
 					pygame.quit()
 					sys.exit()
-				if event.type == self.meteor_timer and not self.game_over:
+				if event.type == self.meteor_timer and not self.game_over and pygame.time.get_ticks() > 1_500:
 					Meteor((self.all_sprites, self.meteors), choice(self.meteor_surfaces))
 
 			self.display_surface.fill(BG_COLOR)
