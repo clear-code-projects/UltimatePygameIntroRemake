@@ -1,4 +1,5 @@
-import pygame 
+import pygame
+from settings import *
 
 class Player(pygame.sprite.Sprite):
 	def __init__(self, groups, start_pos, create_laser):
@@ -50,8 +51,8 @@ class Player(pygame.sprite.Sprite):
 		self.rect.center += self.direction * self.speed * dt
 		
 		# clamps to keep player on screen
-		self.rect.centerx = max(self.rect.width / 2,min(1280 - self.rect.width / 2, self.rect.centerx))
-		self.rect.centery = max(self.rect.height / 2,min(720 - self.rect.height / 2, self.rect.centery))
+		self.rect.centerx = max(self.rect.width / 2,min(SCREEN_SIZE[0] - self.rect.width / 2, self.rect.centerx))
+		self.rect.centery = max(self.rect.height / 2,min(SCREEN_SIZE[1] - self.rect.height / 2, self.rect.centery))
 
 	def update(self,dt):
 		self.input()
